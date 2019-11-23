@@ -1,7 +1,7 @@
 var http = require('http');
 var fs = require('fs');
  
-
+console.log("++++++ Starting server ++++++++++")
 
 var handleRequest = function(request, response) {
   console.log('Received request for URL: ' + request.url);
