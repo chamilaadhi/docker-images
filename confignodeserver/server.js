@@ -11,7 +11,10 @@ var handleRequest = function(request, response) {
   console.log("File content : " + contents);
   var env = process.env.EXT_PROPERTY;
   console.log("Environment Variable: " + env);
-  response.end('Hello World !. File content ' + contents + ", Environment Variable: " + env);
+
+  var configmap = process.env.CONF_MAP;
+  console.log("Configma Variable: " + configmap);
+  response.end('Hello World !. File content ' + contents + ", Environment Variable: " + env + " ,ConfigMap Variable " + configmap);
 };
 var www = http.createServer(handleRequest);
 www.listen(8080);
